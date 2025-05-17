@@ -1,44 +1,46 @@
 # ChatGPT Memory Key — External User-Controlled Memory Architecture (BIO-DISK Concept)
 
-**Author:** Dr. Evgeny Feldman  
-**Date:** May 2025  
-**License:** Creative Commons Attribution 4.0 International (CC BY 4.0)
-
----
+Author: Dr. Evgeny Feldman  
+Date: May 2025
 
 ## 🔹 Abstract
+This repository outlines a secure, modular, and user-controlled memory solution for ChatGPT and other LLM-based systems.
 
-This repository presents a proposal for a modular, encrypted, external memory solution for ChatGPT and other LLM-based platforms.  
-Inspired by secure hardware wallets and privacy-first design principles, this system allows users to:
+The core idea: allow memory to be stored locally (USB drive, cloud partition) under the full control of the user, including segmentation, encryption, backup, and deletion.
 
-- Fully own and manage their AI memory
-- Store it offline or in private cloud storage
-- Retain full control over encryption, access, and deletion
-
----
+Inspired by:
+- Crypto hardware wallets (Ledger, Trezor)
+- Secure enclaves (Apple T2, Yubikey)
+- Privacy-first architecture and BYOB (Bring Your Own Backup) models
 
 ## 📄 Contents
-
-| File | Description |
-|------|-------------|
-| [`whitepaper.pdf`](./whitepaper.pdf) | Full technical proposal with architecture, use cases, and legal model |
-| [`pitch-brief.pdf`](./pitch-brief.pdf) | One-page summary for stakeholders |
-| [`LICENSE`](./LICENSE) | Licensing terms (CC BY 4.0) |
-
----
+- `whitepaper.pdf` – full technical proposal
+- `pitch-brief.pdf` – 1-page summary
+- `LICENSE` – usage terms
 
 ## ✅ Key Concepts
+- External memory device with segment-based structure: BIO / HISTORY / TASKS / MARKED
+- E2E encryption; user-only key management
+- Emergency wipe options
+- Optional hybrid sync with cloud
+- No access by OpenAI to user memory
+- Timestamped idea publication
 
-- **External BIO-DISK**: USB device or formatted storage partition for personal memory
-- **Segmented Structure**: BIO / HISTORY / TASKS / MARKED memory zones
-- **Encryption & Keys**: E2E encryption, user-only access
-- **Emergency Wipe**: Local and remote options to erase all data
-- **Bring Your Own Backup (BYOB)**: OpenAI holds no recovery responsibility
+## 📝 License
+Provided under Creative Commons Attribution 4.0 International (CC BY 4.0).  
+You are free to use, adapt, and share with credit to Dr. Evgeny Feldman.
 
----
 
-## 🔗 Example Commands (Future API Interface)
+## Intellectual Property Notice
 
-```python
-memory.get(segment="BIO")
-memory.query("show me saved tasks")
+This concept, titled “ChatGPT Memory Key – BIO-DISK Architecture,” and all associated terminology, diagrams, architecture logic, and strategic positioning, are the original intellectual property of Dr. Eugene Feldman.
+
+The author retains full ownership and reserves all rights.
+
+This document is provided as a **confidential concept**.
+Any use, reproduction, implementation, modification, or distribution — whether in part or in full — **requires prior written consent**.
+
+Unauthorized commercial or research use of this concept, including derivative designs or architectures that substantially reflect its structure, is prohibited and will be considered a violation of the author’s intellectual property rights under international law.
+
+License: **Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 (CC BY-NC-ND 4.0)**
+Link: https://creativecommons.org/licenses/by-nc-nd/4.0/
